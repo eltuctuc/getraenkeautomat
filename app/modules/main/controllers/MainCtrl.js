@@ -1,4 +1,5 @@
 'use strict';
+
 /**
  * @ngdoc controller
  * @name myApp.controller:MainCtrl
@@ -8,6 +9,7 @@
  *
  * @requires $scope
  * */
+
 angular.module('myApp.main')
 
 	/**
