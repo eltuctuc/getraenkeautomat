@@ -10,13 +10,16 @@
  * @requires $routeProvider
  * */
 
-angular.module('myApp.about', ['ngRoute'])
+angular.module('myApp.aboutModule', [
+	'myApp.aboutModule.controllers',
+	'ngRoute'
+])
 
-	.config(['$routeProvider', function($routeProvider) {
-		$routeProvider.when('/about', {
-			templateUrl: 'modules/about/views/index.html',
-			controller: 'AboutCtrl'
-		});
-	}])
+.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.when('/about', {
+		templateUrl: 'modules/about/views/index.html',
+		controller: 'AboutCtrl'
+	});
+}])
 
 ;

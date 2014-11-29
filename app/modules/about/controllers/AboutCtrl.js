@@ -8,9 +8,10 @@
  * _Please update the description and dependencies._
  *
  * @requires $scope
+ * @requires $log
  * */
 
-angular.module('myApp.about')
+angular.module('myApp.aboutModule.controllers',[])
 
 	/**
 	 * Controller

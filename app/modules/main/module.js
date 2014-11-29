@@ -8,9 +8,14 @@
  * _Please update the description and dependencies._
  *
  * @requires $routeProvider
- * */
+ **/
 
-angular.module('myApp.main', ['ngRoute'])
+angular.module('myApp.mainModule', [
+		'myApp.mainModule.controllers',
+		'myApp.mainModule.services',
+		'myApp.mainModule.directives',
+		'ngRoute'
+	])
 
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider.when('/main', {
@@ -18,5 +23,8 @@ angular.module('myApp.main', ['ngRoute'])
 			controller: 'MainCtrl'
 		});
 	}])
-
 ;
+
+angular.module('myApp.mainModule.controllers', []);
+angular.module('myApp.mainModule.services', []);
+angular.module('myApp.mainModule.directives', []);

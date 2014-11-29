@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * @module myApp.main
+ * @module myApp.mainModule.controllers
  * @name MainCtrl
  * @description
  * Tests for MainCtrl under myApp

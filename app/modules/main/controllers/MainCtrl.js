@@ -2,23 +2,31 @@
 
 /**
  * @ngdoc controller
- * @name myApp.controller:MainCtrl
+ * @name myApp.mainModule.controllers:MainCtrl
  *
  * @description
- * _Please update the description and dependencies._
  *
  * @requires $scope
+ * @requires $log
+ * @requires CoinsService
+ * @requires SlotsService
  * */
 
-angular.module('myApp.main')
-
-	/**
-	 * Controller
-	 */
-	.controller('MainCtrl', [
-		'$scope', '$log',
-		function($scope, $log) {
+angular.module('myApp.mainModule.controllers').controller('MainCtrl',
+	[
+		'$scope', '$log', 'CoinsService', 'SlotsService',
+		function($scope, $log, CoinsService, SlotsService) {
 			$log.info('Main Ctrl started');
+
+			$scope.slots = SlotsService.getAll();
+
+			$scope.coins = CoinsService.getInputTotal();
+			$scope.output = '';
+			$scope.msg = '';
+
+
+			$scope.totalCoins = CoinsService.getTotalCoins();
+			$scope.inputCoins = CoinsService.getInputCoins();
 		}
 	])
 ;

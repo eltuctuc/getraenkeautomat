@@ -39,15 +39,18 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-	</header>
 
-	<!--[if lt IE 7]>
-	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+		<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+	</header>
 
 	<div ng-view></div>
 
-	<div>Angular seed app: v<span app-version></span></div>
+	<hr>
+	<footer>
+		<p>Angular seed app: v<span app-version></span></p>
+	</footer>
 </div>
 
 <!-- In production use:
@@ -58,6 +61,9 @@
 <script src="app.js"></script>
 <script src="modules/main/module.js"></script>
 <script src="modules/main/controllers/MainCtrl.js"></script>
+<script src="modules/main/services/CoinsService.js"></script>
+<script src="modules/main/services/SlotsService.js"></script>
+<script src="modules/main/directives/stockDirective.js"></script>
 <script src="modules/about/module.js"></script>
 <script src="modules/about/controllers/AboutCtrl.js"></script>
 <script src="components/version/version.js"></script>
